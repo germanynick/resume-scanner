@@ -38,7 +38,7 @@ def on_submit(api_key, job, resumes):
             },
             {
                 "role": "user",
-                "content": "Please find the resumes attached below. I need to find the top 5 candidates that closely align with the job description."
+                "content": "Please find the resumes attached below. I need to identify the top 5 candidates that closely align with the job description. Additionally, I need to generate core interview questions for these candidates and create an evaluation template for the interview process."
             },
             {
                 "role": "user",

@@ -24,7 +24,7 @@ def get_assistant(client):
 
 def on_submit(api_key, job, resumes):
     client = OpenAI(api_key=api_key)
-    assistant = get_assistant()
+    assistant = get_assistant(client)
 
     files = [client.files.create(file=open(resume, "rb"), purpose="assistants") for resume in resumes]
 
@@ -82,7 +82,7 @@ inputs = [
 ]
 
 outputs = [
-    gr.Markdown("Resume Matched")
+    gr.Markdown(label="Results will be displayed here!")
 ]
 
 ui = gr.Interface(
